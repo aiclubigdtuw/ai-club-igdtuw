@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Club IGDTUW</title>
+    <title>AI Club IGDTUW
+    </title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/logo/logo.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,34 +19,44 @@
     <link rel="stylesheet" href="assets/css/nav_footer.css" />
     <link rel="stylesheet" href="./assets/css/index.css" />
     <link rel="stylesheet" href="./assets/css/club.css">
-    
+    <!-- <link rel="script" href="./assets/js/nav.js"/> -->
     <!--footer icon link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
   </head>
 
   <body>
-
     <!-- Nav Bar  -->
     <div class="navbar sidebarMenu" id="navbar">
       <div class="nav-left">
         <img
           src="./assets/images/logo/logo_white.png"
           style="filter: grayscale(50%)"
-          height="125"
+          height="98"
         />
-        AI Club
+        AI Club IGDTUW
+        <button class="btn" onclick="nav_toggle()">
+          <img class="ham-btn" src="assets\images\logo\ham_btn_test_final.png" height="60px" width="58px">
+      </button>
       </div>
       <div class="nav-right">
-        <a href="./index.html">Home</a>
-        <a href="./pages/about.html">About Us</a>
-        <a href="./pages/events.html">Events</a>
-        <a href="./pages/team.html">Our Team</a>
-        <a href="./pages/contact.html">Contact us</a>
+        <a href="./index.html" class="nav-link">Home</a>
+        <a href="./pages/about.html" class="nav-link">About  Us</a>
+        <a href="./pages/events.html" class="nav-link">Events</a>
+        <a href="./pages/team.html" class="nav-link">Our Team</a>
+        <a href="./pages/contact.html" class="nav-link">Contact us</a>
+      </div>
+      <div id="t1" class="hamburger">
+        <span class="bar"><a href="./index.html">Home</a></span>
+        <span class="bar"><a href="./pages/about.html">About  Us</a></span>
+        <span class="bar"><a href="./pages/events.html">Events</a></span>
+        <span class="bar"><a href="./pages/team.html">Our Team</a></span>
+        <span class="bar"><a href="./pages/contact.html">Contact us</a></span>
+        <span class="bar" onclick="closeMenu()"><a class="a1" style="color: brown;">CLOSE</a></span>
       </div>
     </div>
+    
     <!-- Nav Bar end -->
-
-    <main>
+    <main onclick="closeMenu()">
       <!-- Hero  (Riya Ahlawat) -->
       <div class="video-background">
         <video autoplay muted loop id="bgVideo">
@@ -52,7 +64,7 @@
             Your browser does not support the video tag.
         </video>
     </div>
-
+    <hr color="navyblue" width=70%>
       <!-- About  -->
        <!-- replace with vamikas about us section -->
       <section id="about-us" class="about-us-section">
@@ -67,8 +79,8 @@
       </section>
 
       <!-- Faculty section -->
+  <hr color="navyblue" width="70%">
        <div class="faculty">
-
          <section class="testimonial-section">
            <h2 class="testimonial-title">AI CLUB FACULTY</h2> <br>
            <p class="testimonial-subtitle">Guiding the future of innovation and technology through collaborative exploration in AI.</p>
@@ -158,5 +170,6 @@
     <!--Footer ends-->
     <script src="./assets/js/script-index.js"></script>
     <script src="./assets/js/club.js"></script>
+    <script src="./assets/js/nav.js"></script>
   </body>
 </html>
