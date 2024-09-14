@@ -25,7 +25,17 @@
     width: inherit;
     flex-direction: row;
 }
-.carousel-item {
+
+.carousel-item{
+    position: relative;
+    transition: 0.7s ease;
+    background-color: rgba(238, 106, 128, 0.785);
+    border-radius: 20px;
+    height: 40vh;
+    width: 24vw; /* Default width, adjusted for different layouts */
+    display: block;
+    text-align: center;
+
     width: 24vw; 
     margin-right: 1vw;
     box-sizing: border-box;
@@ -36,14 +46,21 @@
     height: 40vh;
     display: block;
 }
-
-.carousel-item.expand {
-    width: 31.2vw; 
-    background-color: rgba(21, 42, 109, 0.672);
+.carousel-item.expand .expanded-member{
+    display: block;
 }
 
+.carousel-item.expand .normal-member{
+    display: none;
+}
+.carousel-item.expand {
+    /* width: 31.2vw;  */
+    background-color: rgba(21, 42, 109, 0.672);
+    width: 29vw;
+}
 .carousel-item.shrink {
-    width: 20.4vw; 
+    width: 21.5vw;
+    /* width: 20.4vw;  */
     background-color: rgba(137, 43, 226, 0.626);
 }
 
@@ -68,6 +85,8 @@ button.next {
 }
 
 
+
+
 /* Responsive adjustments */
 @media only screen and (max-width: 1100px) {
     button.prev, button.next {
@@ -88,6 +107,7 @@ button.next {
     }
     .carousel-container {
         overflow:auto;
+        width: 100%;
         gap: 1rem; 
     }
     .carousel {
