@@ -14,6 +14,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 80px 10px 140px;
+
   position: relative; 
   z-index: 1;
   width: 100%;
@@ -24,13 +25,16 @@
   display: flex;
   align-items: center;
   justify-content: left;
-  font-size: 3rem;
+  font-size: 2.7rem;
   color: white;
   padding: 10px;
 }
 
 .nav-left img{
-  margin: 2rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 20px;
+
 }
 
 .nav-middle{
@@ -84,18 +88,99 @@
   transform: scaleX(1); 
 }
 
+.button .ham-btn{
+  /* display: none; */
+  padding: 0px 0px 0px 0px;
+  padding-right: 0px;
+  background-color: #161616;
+}
 
-@media screen and (max-width: 768px) {
+.btn{
+  background-color:rgba(6, 21, 21, 0);
+  border:none;
+  margin-left: 50px;
+  display:none;
+}
+
+.hamburger{
+  display:none;
+}
+
+@media screen and (max-width: 1010px) {
+
+  .btn{
+    background-color:rgba(6, 21, 21, 0);
+    border:none;
+    margin-left: 50px;
+    display: flex;
+  }
+  
+  .hamburger{
+    /* display:block; */
+    margin-left: 2px;
+    cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(1){
+    transition: all 0.2sec ease-in-out;
+  }
+  .hamburger.active .bar:nth-child(2){
+    transform: translateY(4px);
+  }
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(4px);
+  }
+  .hamburger.active .bar:nth-child(4){
+    transform: translateY(4px);
+  }
+  .hamburger.active .bar:nth-child(5){
+    transform: translateY(4px);
+  }
+
+  .bar{
+    align-items: center;
+    display: inline-flex;
+    width: 100vh;
+    padding-left: 25%;
+    padding-top: 0px;
+    padding-bottom: 2px;
+    height: 30px;
+    text-align:center;
+    font-size: larger;
+    margin: 1px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(2, 15, 27);
+  }
+
+  .navbar .a1{
+    font-size:medium;
+    padding: 15px 15px 5px;
+  }
+
   .navbar {
     flex-direction: column;
   }
   .navbar .nav-right {
+    /* flex-direction: row;
+    padding: 5px 0px;
+    letter-spacing: .2rem;
+    line-height: normal; */
+    display: none;
+  }
+  .navbar .nav-left{
     flex-direction: row;
-    padding: 5px 50px;
+    text-align: center;
+    letter-spacing: .1rem;
+    line-height: 45px;
+  }
+  .navbar .nav-left img{
+    margin-right: auto;
+    margin-right: 20px;
   }
   .navbar a {
     font-size: small;
-    padding: 4px 6px;
+    padding: 15px 15px 5px;
     text-decoration: none;
   }
 }
@@ -110,7 +195,7 @@
   background-image: url(/assets/images/bg/contactBackground.png);
   padding: 50px 200px 50px 200px;
   color: white;
-  height: 120px;
+  height: 80px;
 }
 
 .footer-left {
