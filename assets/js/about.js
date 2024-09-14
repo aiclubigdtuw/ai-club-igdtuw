@@ -11,4 +11,3 @@ document.querySelectorAll('.accordion-header').forEach(header => {
 document.getElementById('join-us-button').addEventListener('click', function() {
     alert('Welcome to the AI Club! 🚀');
 });
-
