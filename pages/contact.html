@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - AI Club IGDTUW</title>
+  <link rel="icon" type="image/x-icon" href="../assets/images/logo/logo.jpeg">
   <link rel="stylesheet" href="/assets/css/contact.css">
   <link rel="stylesheet" href="/assets/css/nav_footer.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -12,16 +13,18 @@
   
 </head>
 <body>
-  
   <!-- Nav Bar  -->
   <div class="navbar sidebarMenu" id="navbar">
     <div class="nav-left">
       <img
         src="../assets/images/logo/logo_white.png"
         style="filter: grayscale(50%)"
-        height="125"
+        height="98"
       />
-      AI Club
+      AI Club IGDTUW
+      <button class="btn" onclick="nav_toggle()">
+        <img class="ham-btn" src="../assets\images\logo\ham_btn_test_final.png" height="75px" width="70px">
+    </button>
     </div>
     <div class="nav-right">
       <a href="../index.html">Home</a>
@@ -30,9 +33,17 @@
       <a href="./team.html">Our Team</a>
       <a href="./contact.html">Contact us</a>
     </div>
+    <div id="t1" class="hamburger">
+      <span class="bar"><a href="/index.html">Home</a></span>
+      <span class="bar"><a href="../pages/about.html">About  Us</a></span>
+      <span class="bar"><a href="../pages/events.html">Events</a></span>
+      <span class="bar"><a href="../pages/team.html">Our Team</a></span>
+      <span class="bar"><a href="../pages/contact.html">Contact us</a></span>
+      <span class="bar" onclick="closeMenu()"><a class="a1" style="color: brown;">CLOSE</a></span>
+    </div>
   </div>
   <!-- Nav Bar end -->
-
+  <main  onclick="closeMenu()">
 <div class="contact-main">
   <div class="contact-container">
     <header class="header">
@@ -46,7 +57,7 @@
     </div>
     
     <div class="contact-form">
-      <p class="form-intro">We would love to hear from you!</p>
+      <p class="form-intro" style="color: aliceblue;">We would love to hear from you!</p>
       <input type="text" placeholder="Your Name">
       <input type="email" placeholder="Your Email">
       <textarea placeholder="Your Message"></textarea>
@@ -54,7 +65,7 @@
     </div>
   </div>    
   </div>
-
+</main>
   <!--Footer section -->
   <footer class="footer">
     <div class="footer-left">
@@ -80,7 +91,6 @@
     </div>
   </footer>
   <!--Footer ends-->
-  
+  <script src="../assets/js/nav.js"></script>
 </body>
 </html>
-
