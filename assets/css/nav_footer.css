@@ -4,21 +4,52 @@
   --navbar-text-hover-color: #232f3e;
 }
 
+
 /* Nav Bar */
 .navbar {
   background-color: rgba(1, 13, 36, 0.868); 
   background-image: url(/assets/images/bg/contactBackground.png);
-  font-size: 1.5rem;
-  overflow: hidden;
+  font-size: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 80px 10px 140px;
-
-  position: relative; 
+  padding: 10px 10px 10px 10px;
+  /* position: relative;  */
   z-index: 1;
   width: 100%;
+  height: auto;
   box-sizing: border-box; 
+  overflow: hidden;
+}
+/* 
+.sidebarMenu{
+  display: flex;
+} */
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Ensure spacing between logo and text */
+}
+
+/* .nav-right{
+  align-items: right;
+} */
+
+.nav-left img {
+  height: 98px;
+  filter: grayscale(50%);
+}
+
+.nav-left h1 {
+  font-size: 2rem;
+  margin-left: 10px; /* Ensure consistent spacing */
+}
+
+.nav-right a {
+  /* margin-right: 15px; */
+  text-decoration: none;
+  color: #fff;
 }
 
 .nav-left{
@@ -61,6 +92,7 @@
   font-weight: bold;
 }
 
+
 .navbar a {
   position: relative;
 }
@@ -96,58 +128,73 @@
 }
 
 .btn{
-  background-color:rgba(6, 21, 21, 0);
+  background-color:rgba(204, 223, 223, 0);
   border:none;
   margin-left: 50px;
   display:none;
 }
-
+.fa-bars{
+  color: white;
+  font-size: 3rem ;
+}
 .hamburger{
   display:none;
 }
 
 @media screen and (max-width: 1010px) {
 
+  .navbar{
+    /* overflow: hidden; */
+    gap: 0px;
+  }
+
   .btn{
     background-color:rgba(6, 21, 21, 0);
     border:none;
-    margin-left: 50px;
+    /* margin-left: 50px; */
     display: flex;
+    /* margin-right: 10px; */
   }
   
   .hamburger{
     /* display:block; */
-    margin-left: 2px;
+    /* margin-left: rem; */
     cursor: pointer;
+    width: 60%;
+    overflow: hidden;
   }
 
   .hamburger.active .bar:nth-child(1){
     transition: all 0.2sec ease-in-out;
   }
   .hamburger.active .bar:nth-child(2){
-    transform: translateY(4px);
+    transform: translateY(0.1rem);
   }
   .hamburger.active .bar:nth-child(3){
-    transform: translateY(4px);
+    transform: translateY(0.1rem);
   }
   .hamburger.active .bar:nth-child(4){
-    transform: translateY(4px);
+    transform: translateY(0.1rem);
   }
   .hamburger.active .bar:nth-child(5){
-    transform: translateY(4px);
+    transform: translateY(0.1rem);
   }
+
+  /* .navbar sidebarMenu{
+    margin-left: 0px;
+  } */
 
   .bar{
     align-items: center;
     display: inline-flex;
-    width: 100vh;
+    width: 90vh;
     padding-left: 25%;
     padding-top: 0px;
     padding-bottom: 2px;
     height: 30px;
     text-align:center;
     font-size: larger;
-    margin: 1px auto;
+    margin: 1px 0px 0px 0px;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-color: rgb(2, 15, 27);
@@ -155,7 +202,7 @@
 
   .navbar .a1{
     font-size:medium;
-    padding: 15px 15px 5px;
+    /* padding: 15px 15px 5px; */
   }
 
   .navbar {
@@ -167,45 +214,81 @@
     letter-spacing: .2rem;
     line-height: normal; */
     display: none;
+    margin-left: 0px;
   }
   .navbar .nav-left{
     flex-direction: row;
     text-align: center;
     letter-spacing: .1rem;
-    line-height: 45px;
+    line-height: 35px;
   }
   .navbar .nav-left img{
-    margin-right: auto;
-    margin-right: 20px;
+    margin-left:0.3rem;
+    width: 5rem;
+    height: auto;
   }
+
   .navbar a {
     font-size: small;
     padding: 15px 15px 5px;
     text-decoration: none;
   }
-}
 
+  .nav-left{
+    gap: 0px;
+    padding: 0px;
+    width: 70%vw;
+    margin: 0px;;
+
+  }
+
+  .btn{
+    margin: 0px;
+    height: auto;
+    width: auto;
+    margin-right: 0.5rem;
+    margin-left: 0.3rem;
+  }
+
+  .txt{
+    font-size: smaller;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
 
 /* Footer */
 .footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: rgba(1, 13, 36, 0.868)/*#213967*/;
   background-image: url(/assets/images/bg/contactBackground.png);
-  padding: 50px 200px 50px 200px;
-  color: white;
-  height: 80px;
+  object-fit:fill;
+  padding: 10px 10px 10px 10px;
+  color: rgb(0, 44, 116);
+  /* height: 80px; */
 }
 
+.topfooter{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* background-color: rgba(1, 13, 36, 0.868)#213967; */
+  /* background-image: url(/assets/images/bg/contactBackground.png); */
+  padding: 1rem 5rem 1rem 5rem;
+  color: rgb(0, 44, 116);
+  height: auto;
+  width: auto;
+}
 .footer-left {
   display: flex;
   align-items: center;
+  gap: 2rem;
+  margin: 1rem;
 }
 
 .club-logo {
   width: 100px;
-  margin-right: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .club-info h3 {
@@ -217,12 +300,13 @@
 .club-info p {
   font-size: 16px;
   color: white;
+  line-height: 1rem;
 }
 
 .footer-right {
   text-align: center;
-  background-color: #28416fae;
-  padding: 10px 30px 10px 30px;
+  /* background-color: #28416fae; */
+  padding: 1rem 1rem 1rem 1rem;
   border-radius: 20px;
 }
 
@@ -236,22 +320,30 @@
   display: flex;
   justify-content: center;
   gap: 50px;
-  margin: 0px 20px 0px 20px;
+  margin: 0px 1rem 0px 1rem;
 }
 
 .social-icon {
-  width: 50px;
-  height: 50px;
+  width: 2.5rem;
+  height: 2.5rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 100px white;
+  background-color: rgba(255, 255, 255, 0.081);
 }
 
 .social-link:hover .social-icon {
-  transform: scale(1.2);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: scale(1.09);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
 }
-
-@media (max-width: 768px) {
-  .footer {
+.copyright{
+  color: white;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  text-align: center;
+  line-height: 1rem;
+}
+@media (max-width: 908px) {
+  .topfooter {
       flex-direction: column;
       text-align: center;
   }
