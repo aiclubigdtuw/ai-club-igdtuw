@@ -43,6 +43,11 @@ document.querySelectorAll('.pecard-wrap').forEach(function (pecardWrap) {
     slideContainer.on('afterChange', function(event, slick, currentSlide) {
       $('.slick-active').find('.uecard img').fadeIn(200);
     });
+
+    slideContainer.on('afterChange', function(event, slick, currentSlide) {
+      $('.slick-active').find('.uecard img').fadeIn(200);
+    });
+
   });
 })();
 

@@ -366,6 +366,10 @@ body {
   font-family: Lato, sans-serif;
 }
 
+/* .disabled{
+  opacity: 0.5;
+} */
+
 @media screen and (max-width:900px) {
     
   .pecard-info-quiz {
